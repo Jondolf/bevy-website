@@ -81,10 +81,24 @@ TODO
 
 <div class="release-feature-authors">authors: @RobWalt</div>
 
-TODO
+All of the primitives mentioned above can also be rendered with `Gizmos`. For
+this we designed a generic API which should feel very familiar if you have used
+`Gizmos` before. There are two new methods now:
 
-* Show primitive gizmo API
-* Screenshot or video of primitive shapes drawn using gizmos
+* `gizmos.primitive_2d(primitive, position, angle, color)`
+* `gizmos.primitive_3d(primitive, position, rotation, color)`
+
+Based on the primitive there might be some additional configuration options
+similar to existing `Gizmos` drawing methods
+
+```rust
+gizmos
+    .primitive_3d(Sphere { radius }, center, rotation, color)
+    .segments(segments); // <- this here basically sets the level of detail of the sphere
+```
+
+* <ADD RANDOM SCREENSHOT>
+* <ADD LINK TO NEW EXAMPLE>
 
 ### Bounding Volumes
 
