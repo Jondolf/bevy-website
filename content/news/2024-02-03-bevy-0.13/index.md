@@ -64,7 +64,20 @@ Some use cases for primitive shapes include meshing, gizmos, bounding volumes, c
 [Primitive RFC]: https://github.com/bevyengine/rfcs/blob/main/rfcs/12-primitive-shapes.md
 [collection of primitives]: https://dev-docs.bevyengine.org/bevy/math/primitives/index.html
 
-### Meshing
+### Rendering
+
+Now we're taking a closer look at how to visualize the primitives both in 2D
+and in 3D spaces. In this section, we delve into the rendering process with
+meshes and gizmos. You can check out at all supported rendering capabilities
+that are available by taking a look at the following linked example.
+
+![On the left: A cuboid rendered with gizmos. It consists of 12 white lines. On the right: A cuboid rendered with meshes. It consists of 6 white faces.](cuboids.png)
+
+![On the left: A torus rendered with gizmos. It consists of many small rings, all connected by 4 big rings. On the right: A torus rendered with meshes. A shape that looks like a donut.](tori.png)
+
+[Link to the primitive showcase example](https://bevyengine.org/examples/Math/Math%20Primitives)
+
+#### Meshing
 
 <div class="release-feature-authors">authors: @Jondolf</div>
 
@@ -135,14 +148,32 @@ Some default values for mesh shape dimensions have also been changed to be more 
 [`2d_shapes`]: https://bevyengine.org/examples/2D%20Rendering/2d-shapes/
 [`3d_shapes`]: https://bevyengine.org/examples/3D%20Rendering/3d-shapes/
 
-### Gizmos
+#### Gizmos
 
 <div class="release-feature-authors">authors: @RobWalt</div>
 
-TODO
+All of the primitives mentioned above can also be rendered with `Gizmos`. For
+this we designed a generic API which should feel very familiar if you have used
+`Gizmos` before. There are two new methods now:
 
-* Show primitive gizmo API
-* Screenshot or video of primitive shapes drawn using gizmos
+* [`gizmos.primitive_2d(primitive, position, angle, color)`]
+* [`gizmos.primitive_3d(primitive, position, rotation, color)`]
+
+Based on the primitive there might be some additional configuration options
+similar to existing `Gizmos` drawing methods, e.g. here is a small showcase of
+the [`SphereBuilder`], which offers a `segments` method to control the level of
+detail of the sphere.
+
+```rust
+let sphere = Sphere { radius };
+gizmos
+    .primitive_3d(sphere, center, rotation, color)
+    .segments(segments);
+```
+
+[`gizmos.primitive_2d(primitive, position, angle, color)`]: https://dev-docs.bevyengine.org/bevy/gizmos/prelude/trait.GizmoPrimitive2d.html#
+[`gizmos.primitive_3d(primitive, position, rotation, color)`]: https://dev-docs.bevyengine.org/bevy/gizmos/prelude/trait.GizmoPrimitive2d.html#
+[`SphereBuilder`]: https://dev-docs.bevyengine.org/bevy/gizmos/primitives/dim3/struct.SphereBuilder.html
 
 ### Bounding Volumes
 
