@@ -151,9 +151,7 @@ Some default values for mesh shape dimensions have also been changed to be more 
 
 <div class="release-feature-authors">authors: @RobWalt</div>
 
-All of the primitives mentioned above can also be rendered with `Gizmos`. For
-this we designed a generic API which should feel very familiar if you have used
-`Gizmos` before. There are two new methods now:
+Primitives can also be rendered with [`Gizmos`]. There are two new generic methods:
 
 * [`gizmos.primitive_2d(primitive, position, angle, color)`]
 * [`gizmos.primitive_3d(primitive, position, rotation, color)`]
