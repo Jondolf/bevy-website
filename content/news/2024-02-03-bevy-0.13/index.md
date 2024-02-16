@@ -156,10 +156,9 @@ Primitives can also be rendered with [`Gizmos`]. There are two new generic metho
 * [`gizmos.primitive_2d(primitive, position, angle, color)`]
 * [`gizmos.primitive_3d(primitive, position, rotation, color)`]
 
-Based on the primitive there might be some additional configuration options
-similar to existing `Gizmos` drawing methods, e.g. here is a small showcase of
-the [`SphereBuilder`], which offers a `segments` method to control the level of
-detail of the sphere.
+Some primitives can have additional configuration options similar to existing [`Gizmos`] drawing methods.
+For example, calling [`primitive_3d`] with a [`Sphere`] returns a [`SphereBuilder`], which offers a `segments` method
+to control the level of detail of the sphere.
 
 ```rust
 let sphere = Sphere { radius };
