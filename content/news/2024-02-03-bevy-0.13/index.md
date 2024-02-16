@@ -167,8 +167,10 @@ gizmos
     .segments(segments);
 ```
 
-[`gizmos.primitive_2d(primitive, position, angle, color)`]: https://dev-docs.bevyengine.org/bevy/gizmos/prelude/trait.GizmoPrimitive2d.html#
-[`gizmos.primitive_3d(primitive, position, rotation, color)`]: https://dev-docs.bevyengine.org/bevy/gizmos/prelude/trait.GizmoPrimitive2d.html#
+[`Gizmos`]: https://dev-docs.bevyengine.org/bevy/gizmos/prelude/struct.Gizmos.html
+[`primitive_2d`]: https://dev-docs.bevyengine.org/bevy/gizmos/prelude/trait.GizmoPrimitive2d.html
+[`primitive_3d`]: https://dev-docs.bevyengine.org/bevy/gizmos/prelude/trait.GizmoPrimitive2d.html
+[`Sphere`]: https://dev-docs.bevyengine.org/bevy/prelude/struct.Sphere.html
 [`SphereBuilder`]: https://dev-docs.bevyengine.org/bevy/gizmos/primitives/dim3/struct.SphereBuilder.html
 
 ### Bounding Volumes
