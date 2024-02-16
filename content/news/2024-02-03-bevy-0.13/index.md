@@ -66,16 +66,15 @@ Some use cases for primitive shapes include meshing, gizmos, bounding volumes, c
 
 ### Rendering
 
-Now we're taking a closer look at how to visualize the primitives both in 2D
-and in 3D spaces. In this section, we delve into the rendering process with
-meshes and gizmos. You can check out at all supported rendering capabilities
-that are available by taking a look at the following linked example.
+Primitive shapes can be rendered using both meshes and gizmos. In this section, we'll take a closer look the new APIs.
+
+Below, you can see a cuboid and a torus rendered using meshes and gizmos. You can check out at all primitives that can be rendered in the new [Rendering Primitives] example.
 
 ![On the left: A cuboid rendered with gizmos. It consists of 12 white lines. On the right: A cuboid rendered with meshes. It consists of 6 white faces.](cuboids.png)
 
 ![On the left: A torus rendered with gizmos. It consists of many small rings, all connected by 4 big rings. On the right: A torus rendered with meshes. A shape that looks like a donut.](tori.png)
 
-[Link to the primitive showcase example](https://bevyengine.org/examples/Math/Math%20Primitives)
+[Rendering Primitives]: https://bevyengine.org/examples/Math/render-primitives
 
 #### Meshing
 
