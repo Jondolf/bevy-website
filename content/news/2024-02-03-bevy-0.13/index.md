@@ -153,8 +153,8 @@ Some default values for mesh shape dimensions have also been changed to be more 
 
 Primitives can also be rendered with [`Gizmos`]. There are two new generic methods:
 
-* [`gizmos.primitive_2d(primitive, position, angle, color)`]
-* [`gizmos.primitive_3d(primitive, position, rotation, color)`]
+* [`gizmos.primitive_2d(primitive, position, angle, color)`][`primitive_2d`]
+* [`gizmos.primitive_3d(primitive, position, rotation, color)`][`primitive_3d`]
 
 Some primitives can have additional configuration options similar to existing [`Gizmos`] drawing methods.
 For example, calling [`primitive_3d`] with a [`Sphere`] returns a [`SphereBuilder`], which offers a `segments` method
